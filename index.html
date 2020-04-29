@@ -20,7 +20,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" class="scores" href="xxx"><span class="high-scores"> Highscores</span></a>
+            <div class="nav-item nav-link" class="scores"><span class="high-scores"> Highscores</span></div>
             <a class="nav-item nav-link active" href="index.html">Game</a>
           </div>
         </div>
@@ -75,29 +75,43 @@
 
         <div class="wrong"></div>
         <div class="correct"></div>
+        <img src="https://media2.giphy.com/media/ea3KuP14cRxWo/giphy.gif?cid=ecf05e471c07fd41d28bc9c05b764a763f5bf7e40318cac2&rid=giphy.gif" class="img-fluid img-correct"></img>
+        <img src="https://media0.giphy.com/media/l0ErD5PFoCCBamSuk/giphy.gif?cid=ecf05e471091ed82f923033830868dd8e1b4550706c9fabb&rid=giphy.gif" class="img-fluid img-wrong"></img>
+        
         <br>
 
-        <div class="table">
-            <div class="card" class="body">
-                  <table class="highscores">
-                    <tr>
-                        <th>Player</th>
-                        <th>Score</th>
-                    </tr>
-                    <tr>
-                        <td id="scoreName"></td>
-                        <td id="scoreNumber"></td>
-                    </tr>
-                  </table>
-    
-                  <button type="button" class="btn btn-primary" id="btn-back"><span id="Back">Play again</span></button>
-            </div>
-        </div>
+        
     </div>
  
 
 </div>
 </main>
+
+<div class="row">
+  <div class="col-lg-3"></div>
+  <br>
+  <div class="col-lg-6 col-sm-12">
+  <div class="table">
+    <div class="card" class="body">
+      <br>
+          <table class="highscores">
+            <tr>
+                <th>Player</th>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td id="scoreName"></td>
+                <td id="scoreNumber"></td>
+            </tr>
+          </table>
+
+          <button type="button" class="btn btn-primary" id="btn-back"><span id="Back">Play again</span></button>
+    </div>
+  </div>
+  </div>
+  <div class="col-lg-3"></div>
+</div>
+
 
     <script src="script.js"></script>
 

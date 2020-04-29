@@ -11,8 +11,10 @@ var btn3 = document.querySelector("#btn-3");
 var btn4 = document.querySelector("#btn-4");
 var start = document.querySelector(".btn");
 var highScores = document.querySelector(".high-scores");
-var showCorrect = document.querySelector(".correct")
-var showWrong = document.querySelector(".wrong")
+var showCorrect = document.querySelector(".correct");
+var showWrong = document.querySelector(".wrong");
+var imgCorrect = document.querySelector(".img-correct");
+var imgWrong = document.querySelector(".img-wrong");
 var inputContainer = document.querySelector(".input-container");
 var nameInput = document.querySelector(".form-control");
 var submit = document.querySelector("#btn-submit");
@@ -101,6 +103,9 @@ btn2.style.display = "none";
 btn3.style.display = "none";
 btn4.style.display = "none";
 
+
+imgCorrect.style.display = "none";
+imgWrong.style.display = "none";
 table.style.display = "none";
 inputContainer.style.display = "none";
 
@@ -160,9 +165,11 @@ function checkAnswer(a) {
 //Display the correct message, check the indexQuestion is lower thanthe questions length. If this is true, call again the appendQuestions with the indexQuestion as parameter. 
 function correctMessage() {
     showCorrect.textContent = "Correct!!"
+    imgCorrect.style.display = "block";
     setTimeout(function(){
+        imgCorrect.style.display = "none";
         showCorrect.textContent = ""
-    }, 1500);
+    }, 1000);
     indexQuestion++;
     if (indexQuestion !== lastQuestion) {
         appendQuestions(indexQuestion);
@@ -173,9 +180,11 @@ function correctMessage() {
 
 function wrongMessage() {
     showWrong.textContent = "Wrong!!"
+    imgWrong.style.display = "block";
     setTimeout(function(){
+        imgWrong.style.display = "none";
         showWrong.textContent = ""
-    }, 1500);
+    }, 1000);
     indexQuestion++;
     if (indexQuestion !== lastQuestion) {
         appendQuestions(indexQuestion);
@@ -247,6 +256,7 @@ btn4.addEventListener('click',function(event){
 //Answer buttons
 highScores.addEventListener('click',function(){
     mainContainer.style.display = "none";
+    console.log(table)
     table.style.display = "block";
 })
 
